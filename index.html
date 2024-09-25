@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./images/formulario-de-inscripcion.png" type="image/png">
+    <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Reto: Formulario</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function Formulario() {
+
+            const [nombre, setNombre] = React.useState('');
+            const [email, setEmail] = React.useState('');
+            const [mensaje, setMensaje] = React.useState('');
+
+            const onChangeNombre = evento => {
+                console.log(evento);
+                setNombre(event.target.value);
+            };
+
+            const onChangeEmail = evento => {
+                console.log(evento);
+                setEmail(event.target.value);
+            };
+
+            const onChangeMensaje = evento => {
+                console.log(evento);
+                setMensaje(event.target.value);
+            };
+
+            const onSubmit = evento => {
+                // para evitar que el formulario se comporte de manera `predeterminada`
+                // Conditionally alert based on whether the fields are filled
+                if (nombre) {
+                    alert(`Formulario enviado por: ${nombre}`);
+                }
+                if (email) {
+                    alert(`Tu correo es: ${email}`);
+                }
+                if (mensaje) {
+                    alert(`Has enviado el mensaje: ${mensaje}`);
+                }
+            };
+
+            return (
+                <form onSubmit={onSubmit}>
+                    <h1>Formulario</h1>
+                    <label>
+                        <h4>Nombre:</h4>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="tu nombre"
+                            value={nombre}
+                            onChange={onChangeNombre}
+                        />
+                    </label>
+                    <label>
+                        <h4>Email:</h4>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            value={email}
+                            onChange={onChangeEmail}
+                        />
+                    </label>
+                    <label>
+                        <h4>Mensaje:</h4>
+                        <textarea
+                            type="message"
+                            name="message"
+                            placeholder="tu mensaje"
+                            value={mensaje}
+                            onChange={onChangeMensaje}
+                        />
+                    </label>
+                    <button type="submit">Send</button>
+
+                </form>
+            );
+
+        }
+
+        // `new` and `modern`
+        ReactDOM.createRoot(document.getElementById('root')).render(<Formulario />);
+
+
+        // another `new` and `modern`
+        // const root = ReactDOM.createRoot(document.getElementById('root'));
+        // root.render(<Comprar />);
+
+    </script>
+</body>
+
+</html>

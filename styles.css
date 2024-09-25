@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    text-decoration: none;
+    font-size: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 0 5px 2px rgb(3, 13, 55);
+}
+form h1 {
+    color: rgb(0, 119, 255);
+}
+label {
+    margin: 20px;
+}
+input {
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    background: linear-gradient(45deg, rgb(231, 233, 240), rgb(243, 245, 250)) no-repeat center center/cover;
+}
+input:focus {
+    outline: none;
+    border: 2.5px solid rgb(222, 174, 42) !important;
+}
+input::placeholder {
+    color: rgb(193, 193, 193);
+}
+textarea {
+    width: 400px;
+    min-height: 100px;
+    resize: vertical;
+    /* resize: none; */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    background: linear-gradient(45deg, rgb(231, 233, 240), rgb(243, 245, 250)) no-repeat center center/cover;
+}
+textarea:focus {
+    outline: none;
+    border: 2.5px solid rgb(222, 174, 42) !important;
+}
+textarea::placeholder {
+    color: rgb(193, 193, 193);
+}
+button {
+    padding: 20px;
+    width: 100px;
+    background: linear-gradient(45deg, rgb(0, 119, 255), rgb(71, 152, 245)) no-repeat center center/cover;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, rgb(7, 69, 135), rgb(46, 101, 202)) no-repeat center center/cover;
+    cursor: pointer;
+}
+h4 {
+    margin-bottom: 7px;
+}
+
